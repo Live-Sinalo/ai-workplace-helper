@@ -1,66 +1,144 @@
-# AI Workplace Helper
+# AI Workplace Productivity Assistant
 
-Build a modern, responsive frontend-only SaaS web application called AI Workplace Productivity Assistant.
+## Project Overview
 
-Main Features
+**AI Workplace Productivity Assistant** is a modern, responsive SaaS-style web application designed to help professionals simplify and automate common workplace tasks using AI.
 
-Dashboard: Clean overview with quick-access cards for all AI tools.
+The application provides a centralized dashboard where users can generate emails, summarize meeting notes, plan tasks, conduct research, and interact with an AI workplace assistant.
 
-Smart Email Generator: Generate professional emails with Formal, Friendly, and Persuasive tone options. Make outputs editable.
+This project is **frontend-only** and does not use a backend, database, authentication, or persistent data storage.
 
-Meeting Notes Summarizer: Convert meeting notes into summaries, key decisions, and action items.
+## Features Implemented
 
-AI Task Planner: Turn goals into structured tasks with priorities and suggested deadlines.
+### Smart Email Generator
 
-AI Research Assistant: Summarize topics/articles and provide key insights and recommendations.
+* Generate professional workplace emails.
+* Supports multiple tones:
 
-AI Chatbot: Interactive workplace assistant that responds to user prompts.
+  * Formal
+  * Friendly
+  * Persuasive
+* Editable AI-generated content.
+* Copy and regenerate functionality.
 
-Design
+### Meeting Notes Summarizer
 
-Modern, clean, professional SaaS dashboard.
+* Enter meeting notes.
+* Generate concise summaries.
+* Identify key decisions and action items.
+* Editable generated results.
 
-Light gray background with sage green accents.
+### AI Task Planner
 
-Left sidebar navigation with icons for Dashboard, Email, Meetings, Tasks, Research, and AI Chat.
+* Enter a goal or workplace task.
+* Generate structured task plans.
+* Organize tasks by priority.
+* Provide suggested deadlines.
+* Editable task plans.
 
-Top-right dark mode toggle icon.
+### AI Research Assistant
 
-Responsive on desktop, tablet, and mobile.
+* Enter a topic or article content.
+* Generate summaries.
+* Extract key insights.
+* Provide recommendations.
+* Editable research results.
 
-Use modern cards, rounded corners, subtle shadows, clear typography, and consistent spacing.
+### AI Chatbot
 
-AI & UX
+* Interactive workplace AI assistant.
+* Chat-based interface.
+* Responds to workplace-related prompts.
+* Includes example prompts to help users get started.
 
-Use structured prompts for each AI tool.
+### Dashboard & UI
 
-AI-generated results must be editable.
+* Modern SaaS dashboard interface.
+* Responsive design for desktop, tablet, and mobile.
+* Sidebar navigation.
+* Light gray and sage green colour scheme.
+* Dark mode toggle.
+* Modern cards, rounded corners, and clean typography.
+* Responsible AI disclaimer.
 
-Include Copy and Regenerate actions where appropriate.
+## Technologies and Tools Used
 
-Add a visible Responsible AI disclaimer: AI-generated content may contain errors and should be reviewed and verified before being used for important workplace decisions or communications.
+* **React** – Frontend application development
+* **TypeScript** – Type-safe development
+* **Vite** – Development and build tool
+* **HTML5** – Application structure
+* **CSS3** – Styling and responsive design
+* **Tailwind CSS** – Utility-based responsive styling
+* **Lucide Icons** – Interface icons
+* **Lovable** – AI-assisted application development
 
-Technical Scope
+> The application does not require a backend or database and does not permanently store user data.
 
-Frontend only. No backend, database, authentication, API integrations, or persistent data storage. Do not store user prompts, conversations, notes, or generated content. Use temporary/mock AI responses for the interface where necessary.
+## Setup Instructions
 
-Prioritize a polished, functional UI and intuitive user experience. Do not add unnecessary features or backend functionality.
+### 1. Clone the Repository
 
-This project was built with [Lovable](https://lovable.dev).
+```bash
+git clone <repository-url>
+```
 
-## Build with Lovable
+### 2. Navigate to the Project Directory
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bd3c081b-4438-49a5-a886-8e75184590fc).
+```bash
+cd ai-workplace-productivity-assistant
+```
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### 3. Install Dependencies
 
-## Development
+```bash
+npm install
+```
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### 4. Start the Development Server
 
-```sh
+```bash
+npm run dev
+```
+
+The application will be available at the local development URL provided by Vite, typically:
+
+```text
+http://localhost:5173
+```
+
+### 5. Build for Production
+
+```bash
+npm run build
+```
+
+### 6. Preview the Production Build
+
+```bash
+npm run preview
+```
+
+## Data & Privacy
+
+This application is designed as a **frontend-only prototype**.
+
+* No backend server is used.
+* No database is used.
+* No user accounts or authentication are required.
+* User prompts and generated content are not permanently stored.
+* Data is intended to remain temporary during the current session.
+
+## Responsible AI
+
+AI-generated content may contain inaccuracies or incomplete information. Users should review, verify, and edit AI-generated content before using it for important workplace communications, decisions, or research.
+
+## Author
+
+**Live Ndlebe**
+
+AI Workplace Productivity Assistant
+Frontend Application Project
+
 git clone <this-repository-url>
 cd <repository-name>
 npm i
