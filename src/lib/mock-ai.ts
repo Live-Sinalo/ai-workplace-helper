@@ -1,7 +1,7 @@
 // Temporary mock AI engine. Frontend only: nothing is sent or stored anywhere.
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
-const pick = <T,>(arr: T[]) => arr[Math.floor(Math.random() * arr.length)];
+const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)] as T;
 
 function firstSentence(text: string, fallback: string) {
   const s = text.trim().split(/[.\n!?]/)[0]?.trim();
@@ -87,7 +87,7 @@ export async function summarizeMeeting(notes: string): Promise<MeetingSummary> {
   return {
     summary:
       lines.length > 0
-        ? `The team met to discuss ${firstSentence(lines[0], "project progress").toLowerCase()}. ${
+        ? `The team met to discuss ${firstSentence(lines[0] ?? "", "project progress").toLowerCase()}. ${
             lines.length > 2 ? `Discussion covered ${lines.length} key points, ` : "Discussion focused on priorities, "
           }with alignment reached on next steps and clear ownership assigned for follow-up items.`
         : "The team met to discuss project progress and aligned on next steps.",
@@ -95,7 +95,7 @@ export async function summarizeMeeting(notes: string): Promise<MeetingSummary> {
       ? decisions
       : ["Proceed with the proposed approach", "Revisit scope at the next check-in"],
     actions: (actions.length ? actions : ["Share meeting recap with stakeholders", "Schedule follow-up session"]).map(
-      (task, i) => ({ task, owner: owners[i % owners.length], due: dues[i % dues.length] }),
+      (task, i) => ({ task, owner: owners[i % owners.length] ?? "Team", due: dues[i % dues.length] ?? "TBD" }),
     ),
   };
 }

@@ -50,8 +50,8 @@ function Markdownish({ text }: { text: string }) {
         if (!line.trim()) return null;
         const bullet = line.match(/^[-•]\s+(.*)/);
         const num = line.match(/^(\d+)\.\s+(.*)/);
-        if (bullet) return <p key={i} className="flex gap-2 pl-1"><span className="text-primary">•</span><span>{inline(bullet[1])}</span></p>;
-        if (num) return <p key={i} className="flex gap-2 pl-1"><span className="font-semibold text-primary">{num[1]}.</span><span>{inline(num[2])}</span></p>;
+        if (bullet) return <p key={i} className="flex gap-2 pl-1"><span className="text-primary">•</span><span>{inline(bullet[1] ?? "")}</span></p>;
+        if (num) return <p key={i} className="flex gap-2 pl-1"><span className="font-semibold text-primary">{num[1]}.</span><span>{inline(num[2] ?? "")}</span></p>;
         return <p key={i}>{inline(line)}</p>;
       })}
     </div>
